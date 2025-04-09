@@ -3,7 +3,6 @@ CREATE TABLE users(
     username    VARCHAR(255) NOT NULL,
     email    VARCHAR(255),
     password VARCHAR(255),
-    city VARCHAR(255),
     country  VARCHAR(255)
 );
 
@@ -12,7 +11,8 @@ CREATE TABLE puzzles(
     title VARCHAR(255) NOT NULL,
     category VARCHAR(255),
     company VARCHAR(255),
-    pieces_number INTEGER
+    pieces_number INTEGER,
+    image_url TEXT
 );
 
 CREATE TABLE completed(
@@ -23,4 +23,12 @@ CREATE TABLE completed(
     time TIME NOT NULL,
     first_time BOOLEAN NOT NULL
 );
+
+INSERT INTO users VALUES (1, 'Aaaa', 'a@example.com', null, 'Poland');
+INSERT INTO users VALUES (2, 'Bbbb', 'b@example.com', null, 'Poland');
+INSERT INTO users VALUES (3, 'Cccc', 'c@example.com', null, 'Poland');
+INSERT INTO users VALUES (4, 'Dddd', 'd@example.com', null, 'Poland');
+
+INSERT INTO puzzles VALUES(1, 'Beautiful landscape', 'landscapes', 'Ravensburger', 500, 'url-1');
+
 

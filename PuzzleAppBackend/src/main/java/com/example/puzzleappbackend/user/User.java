@@ -1,4 +1,4 @@
-package user;
+package com.example.puzzleappbackend.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

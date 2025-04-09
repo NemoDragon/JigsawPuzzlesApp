@@ -1,4 +1,4 @@
-package puzzle;
+package com.example.puzzleappbackend.puzzle;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;

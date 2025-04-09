@@ -29,6 +29,7 @@ INSERT INTO users VALUES (2, 'Bbbb', 'b@example.com', null, 'Poland');
 INSERT INTO users VALUES (3, 'Cccc', 'c@example.com', null, 'Poland');
 INSERT INTO users VALUES (4, 'Dddd', 'd@example.com', null, 'Poland');
 
-INSERT INTO puzzles VALUES(1, 'Beautiful landscape', 'landscapes', 'Ravensburger', 500, 'url-1');
+INSERT INTO puzzles VALUES (1, 'Beautiful landscape', 'landscapes', 'Ravensburger', 500, 'url-1');
+INSERT INTO puzzles VALUES (2, 'Beautiful landscape 2', 'landscapes', 'Ravensburger', 1000, 'url-2');
 
 

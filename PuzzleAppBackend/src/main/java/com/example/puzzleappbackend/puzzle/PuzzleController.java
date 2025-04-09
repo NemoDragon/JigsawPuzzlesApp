@@ -47,7 +47,7 @@ public class PuzzleController {
         try {
             Puzzle updatedPuzzle = puzzleService.updatePuzzle(puzzleId, puzzleRequest.getPuzzle());
             return ResponseEntity.ok(updatedPuzzle);
-        } catch(EntityNotFoundException e) {
+        } catch (EntityNotFoundException e) {
             return ResponseEntity.notFound().build();
         }
     }

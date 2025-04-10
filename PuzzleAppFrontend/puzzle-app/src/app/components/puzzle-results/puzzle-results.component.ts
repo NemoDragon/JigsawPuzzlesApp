@@ -41,4 +41,10 @@ export class PuzzleResultsComponent implements OnInit {
       );
     });
   }
+
+  searchPuzzles() {
+    this.puzzleService.searchPuzzles(this.searchTerm).subscribe((data) => {
+      this.puzzles = data.puzzles;
+    });
+  }
 }

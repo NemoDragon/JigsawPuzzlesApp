@@ -32,6 +32,12 @@ public class PuzzleController {
         return puzzle.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("?search={searchTerm}")
+    public ResponseEntity<PuzzleResponse> getPuzzlesBySearchTerm(@PathVariable String searchTerm) {
+        List<Puzzle> puzzles = puzzleService.getPuzzlesBySearchTerm(searchTerm);
+        return ResponseEntity.ok(new PuzzleResponse(puzzles));
+    }
+
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> addPuzzle(@RequestBody PuzzleRequest puzzleRequest) {
         Integer puzzleId = puzzleService.addPuzzle(puzzleRequest.getPuzzle());

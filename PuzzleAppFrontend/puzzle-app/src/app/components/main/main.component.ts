@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Puzzle } from '../../models/puzzle.model';
-import { PuzzleService } from '../../services/puzzle.service';
+import { PuzzleService } from '../../services/puzzle/puzzle.service';
 import { Console } from 'console';
 
 @Component({

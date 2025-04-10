@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Puzzle } from '../../models/puzzle.model';
 import { PuzzleService } from '../../services/puzzle/puzzle.service';
-import { Console } from 'console';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [],
+  imports: [NavbarComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })

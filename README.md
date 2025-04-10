@@ -10,6 +10,6 @@ docker-compose up --build
 ```
 
 ## Running an application
-```bash
+
 Open http://localhost:4200/ in browser
-```
+

@@ -14,4 +14,12 @@ export class PuzzleService {
   getPuzzles(): Observable<{ puzzles: Puzzle[] }> {
     return this.http.get<{ puzzles: Puzzle[] }>(this.backendPuzzlesUrl);
   }
+
+  addPuzzle(puzzle: Puzzle): Observable<Puzzle> {
+    return this.http.post<Puzzle>(this.backendPuzzlesUrl, { puzzle });
+  }
+
+  deletePuzzle(puzzleId: number): Observable<void> {
+    return this.http.delete<void>(`${this.backendPuzzlesUrl}/${puzzleId}`);
+  }
 }

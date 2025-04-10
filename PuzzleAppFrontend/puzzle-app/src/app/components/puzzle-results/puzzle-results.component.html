@@ -1,1 +1,29 @@
-<p>puzzle-results works!</p>
+<div class="area">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search puzzles..." />
+    <div class="puzzle-list">
+        <div *ngFor="let puzzle of puzzles" class="puzzle" [routerLink]="['/puzzle', puzzle.puzzleId]">
+            <div class="info">
+                <div class="title">{{ puzzle.title }}</div>
+                <div class="pieces">pieces: <b>{{ puzzle.piecesNumber }}</b></div>
+            </div>
+            <button class="go-to-puzzle-btn">Check times for this puzzle</button>
+            <img [src]="puzzle.imageUrl" alt="puzzle" />
+            <div class="changing-btns">
+                <button class="delete-btn" (click)="deletePuzzle(puzzle.puzzleId)">Delete</button>
+                <button class="edit-btn">Edit</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="puzzle-add">
+        <h2>Add a new puzzle</h2>
+        <input type="text" [(ngModel)]="this.newPuzzle.title" placeholder="Title" />
+        <input type="text" [(ngModel)]="this.newPuzzle.category" placeholder="Category" />
+        <input type="text" [(ngModel)]="this.newPuzzle.company" placeholder="Company" />
+        <input type="number" [(ngModel)]="this.newPuzzle.piecesNumber" placeholder="Number of pieces" min="1" />
+        <input type="text" [(ngModel)]="this.newPuzzle.imageUrl" placeholder="Image URL" />
+        <button class="add-puzzle-btn" (click)="addPuzzle()">Add Puzzle</button>
+    </div>
+</div>
+
+

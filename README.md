@@ -6,6 +6,10 @@ App project with postgreSQL database, backend in Java Spring and frontend in Ang
 
 ```bash
 git clone https://github.com/NemoDragon/JigsawPuzzlesApp.git
+cd JigsawPuzzlesApp
+cd PuzzleAppBackend
+mvn clean package -DskipTests
+cd ..
 docker-compose up --build
 ```
 

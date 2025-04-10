@@ -18,6 +18,11 @@ public class PuzzleService {
         return puzzleRepository.findById(puzzleId);
     }
 
+    public List<Puzzle> getPuzzlesBySearchTerm(String searchTerm) {
+        List<Puzzle> puzzles = puzzleRepository.findAll();
+        return puzzles.stream().filter(x -> x.getTitle().contains(searchTerm)).toList();
+    }
+
     public Integer addPuzzle(Puzzle puzzle) {
         Puzzle savedPuzzle = Puzzle.builder()
                 .puzzleId(puzzle.getPuzzleId())

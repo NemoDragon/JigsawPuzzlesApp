@@ -1,5 +1,5 @@
 <div class="area">
-    <input type="text" [(ngModel)]="searchTerm" placeholder="Search puzzles..." />
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search puzzles..." (keydown)="searchPuzzles()" />
     <div class="puzzle-list">
         <div *ngFor="let puzzle of puzzles" class="puzzle" [routerLink]="['/puzzle', puzzle.puzzleId]">
             <div class="info">

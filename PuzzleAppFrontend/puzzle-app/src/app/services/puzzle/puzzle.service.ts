@@ -22,4 +22,10 @@ export class PuzzleService {
   deletePuzzle(puzzleId: number): Observable<void> {
     return this.http.delete<void>(`${this.backendPuzzlesUrl}/${puzzleId}`);
   }
+
+  searchPuzzles(searchTerm: string): Observable<{ puzzles: Puzzle[] }> {
+    return this.http.get<{ puzzles: Puzzle[] }>(
+      `${this.backendPuzzlesUrl}?search=${searchTerm}`
+    );
+  }
 }
